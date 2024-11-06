@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Register Form -->
+    <div id="register-form" class="container form active">
+        <h2>Register</h2>
+        <div class="error-message" id="register-error"></div>
+        <div class="input-group">
+            <label for="register-username">Username</label>
+            <input type="text" id="register-username" required>
+        </div>
+        <div class="input-group">
+            <label for="register-email">Email</label>
+            <input type="email" id="register-email" required>
+        </div>
+        <div class="input-group">
+            <label for="register-password">Password</label>
+            <input type="password" id="register-password" required>
+        </div>
+        <button onclick="register()">Register</button>
+        <div class="switch-form">
+            Already have an account? <a href="#" onclick="showLogin()">Login</a>
+        </div>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="container form">
+        <h2>Login</h2>
+        <div class="error-message" id="login-error"></div>
+        <div class="input-group">
+            <label for="login-email">Email</label>
+            <input type="email" id="login-email" required>
+        </div>
+        <div class="input-group">
+            <label for="login-password">Password</label>
+            <input type="password" id="login-password" required>
+        </div>
+        <button onclick="login()">Login</button>
+        <div class="switch-form">
+            Don't have an account? <a href="#" onclick="showRegister()">Register</a>
+        </div>
+    </div>
+
+    <!-- Homepage -->
+    <div id="homepage" class="container form">
+        <h1>Welcome to Homepage</h1>
+        <p id="user-welcome"></p>
+        <button id="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
